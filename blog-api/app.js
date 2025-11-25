@@ -10,4 +10,5 @@ app.use(express.json());
 app.use("/api/posts", postsRoutes);
 app.use("/api/authors", authorsRoutes);
 
-app.listen(3000, () => console.log("API running on port 3000"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`API running on port ${PORT}`));
